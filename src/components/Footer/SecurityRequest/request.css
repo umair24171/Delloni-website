@@ -1,0 +1,29 @@
+.dynamic_max_width {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+.dynamic_send {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: var(--black);
+}
+.open_dream {
+  color: rgba(0, 0, 0, 0.356);
+}
+.drodpwn_minner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.drodpwn_para_semm {
+  display: flex;
+  flex-direction: column;
+}

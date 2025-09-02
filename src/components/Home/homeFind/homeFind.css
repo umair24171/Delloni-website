@@ -1,0 +1,116 @@
+.homeFindMain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.homeFind {
+  width: 100%;
+  max-width: 1000px;
+}
+.homeFindTitle {
+  display: flex;
+  justify-content: center;
+}
+.homeFindTitle p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.724);
+}
+.homeFindAll {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  align-items: center;
+}
+.homeFindAll p {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.724);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.homeFindAll p:hover {
+  color: var(--red);
+}
+
+.homeCardsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* Large screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .homeFindMain {
+    margin-top: 4rem;
+    padding: 0 2rem;
+  }
+
+  .homeFind {
+    max-width: 100%;
+  }
+
+  .homeCardsContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .homeFindAll {
+    justify-content: center;
+  }
+}
+
+/* Tablet screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .homeFindMain {
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+  }
+
+
+
+  .homeCardsContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .homeFindAll {
+    justify-content: center;
+  }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .homeFindMain {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+
+  .homeFind {
+    max-width: 95%;
+  }
+
+  .homeCardsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .homeFindTitle {
+    text-align: center;
+  }
+
+  .homeFindAll {
+    justify-content: center;
+  }
+}

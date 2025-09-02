@@ -1,0 +1,235 @@
+.publicProfileMain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.profileCardBackground {
+  width: 100%;
+  background-color: var(--red);
+  height: 15rem;
+  position: absolute;
+  z-index: -1;
+}
+.publicProfile {
+  width: 100%;
+  max-width: 1000px;
+}
+.publicProfileCard {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.publicProfileLeft {
+  display: flex;
+  gap: 2rem;
+}
+.publicProfileImg img {
+  width: 5rem;
+}
+.publicProfileNameSection {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.publicProfileName p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.publicProfileName p:nth-child(2) {
+  font-size: 1.2rem;
+  margin-top: 0.7rem;
+}
+.publicProfileReportUser p {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: underline;
+}
+.publicProfileReportUser p:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.publicProfileRight {
+  max-width: 32rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: rgba(3, 190, 3, 0.212);
+  height: fit-content;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+.publicProfileRightText p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.publicProfileLeaf img {
+  width: 4rem;
+}
+
+.profileListing {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+  margin-top: 4rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 1rem;
+}
+.profileListing p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.profileListing button {
+  background-color: var(--green);
+  columns: white;
+  padding: 1rem 2rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+}
+/* publicProfile-responsive.css */
+
+/* Large screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .publicProfileMain {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .publicProfile {
+    max-width: 100%;
+  }
+
+  .publicProfileCard {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .publicProfileLeft {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .publicProfileImg img {
+    width: 4rem;
+  }
+
+  .publicProfileNameSection {
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .publicProfileRight {
+    max-width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .publicProfileLeaf img {
+    width: 3.5rem;
+  }
+
+  .profileListing {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .profileListing button {
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    max-width: 20rem;
+  }
+}
+
+/* Tablet screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .profileCardBackground {
+    height: 12rem;
+  }
+
+  .publicProfileCard {
+    padding: 1.5rem;
+  }
+
+  .publicProfileImg img {
+    width: 3.5rem;
+  }
+
+  .publicProfileNameSection {
+    gap: 1.5rem;
+  }
+
+  .publicProfileLeaf img {
+    width: 3rem;
+  }
+
+  .profileListing {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .profileListing button {
+    padding: 0.7rem 1.2rem;
+    max-width: 18rem;
+  }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .profileCardBackground {
+    height: 10rem;
+  }
+
+  .publicProfileCard {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .publicProfileImg img {
+    width: 3rem;
+  }
+
+  .publicProfileNameSection {
+    gap: 1rem;
+  }
+
+  .publicProfileLeaf img {
+    width: 2.5rem;
+  }
+
+  .profileListing {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .profileListing button {
+    padding: 0.6rem 1rem;
+    max-width: 15rem;
+  }
+}

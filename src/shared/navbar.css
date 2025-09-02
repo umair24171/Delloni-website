@@ -1,0 +1,353 @@
+.navbarMain {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: white;
+  position: relative;
+}
+
+.navbar {
+  max-width: 1000px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.navbarLogo img {
+  width: clamp(8rem, 20vw, 10rem);
+  height: auto;
+}
+
+.navbarLogo p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.navbarRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbarButton button {
+  background: var(--green);
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbarLinks button {
+  color: var(--black);
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.navbarLinks button:hover {
+  color: var(--red);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.navbarDropdownParent {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbarDropdownParent.open {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  padding-bottom: 2rem;
+}
+
+.categoryDropdown {
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1200px;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.dropdownColumn {
+  flex: 1;
+  padding: 0.5rem;
+  min-width: 200px;
+}
+
+.dropdownColumn h4 {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.dropdownColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdownColumn li {
+  padding: 0.3rem 0;
+  cursor: pointer;
+}
+
+.dropdownColumn li:hover {
+  color: var(--red);
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 95%;
+  }
+
+  .navbarLogo {
+    gap: 1rem;
+  }
+
+  .navbarRight {
+    gap: 0.5rem;
+  }
+
+  .navbarButton button {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .navbarLinks button {
+    padding: 0.4rem;
+  }
+
+  .categoryDropdown {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .dropdownColumn {
+    min-width: 100%;
+  }
+  .dropdownColumn li {
+    padding: 0.3rem 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .dropdownColumn li:hover {
+    color: var(--red);
+  }
+  .dropdownColumn h4 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbarRight {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .navbarRight.open {
+    display: flex;
+  }
+
+  .navbarButton {
+    width: 100%;
+  }
+
+  .navbarButton button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbarLinks {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbarLinks button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem;
+  }
+
+  .navbarDropdownParent {
+    top: 9rem;
+  }
+
+  .categoryDropdown {
+    flex-direction: column;
+    /* padding: 0.5rem; */
+  }
+
+  .dropdownColumn {
+    min-width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .navbarLogo img {
+    width: clamp(6rem, 18vw, 8rem);
+  }
+
+  .navbarButton button {
+    padding: 0.5rem;
+  }
+  .navbarDropdownParent {
+    top: 7.5rem;
+  }
+}
+
+
+/* Add these styles to your existing Navbar.css file */
+
+.dropdown-loading, 
+.dropdown-error {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+.dropdown-error {
+  color: #dc3545;
+}
+
+.category-main {
+  cursor: pointer;
+  font-weight: 600;
+  color: #007bff;
+  transition: color 0.2s ease;
+}
+
+.category-main:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.subcategory-list {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.subcategory-item {
+  padding: 0.25rem 0;
+  cursor: pointer;
+  color: #555;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.subcategory-item:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Ensure existing dropdown styles work with new structure */
+.categoryDropdown .dropdownColumn ul li {
+  margin: 0.5rem 0;
+}
+
+.categoryDropdown .dropdownColumn ul li span.category-main {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+/* Loading spinner for dropdown */
+.dropdown-loading::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .subcategory-list {
+    margin-left: 0.5rem;
+  }
+  
+  .subcategory-item {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,355 @@
+.profileMain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile {
+  width: 100%;
+  max-width: 1000px;
+}
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.profileImage {
+  width: 7rem;
+  height: 7rem;
+}
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.profileButton {
+  display: flex;
+  gap: 2rem;
+}
+.profileButton button {
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+.profileButtonEdit {
+  background-color: var(--green);
+  color: white;
+}
+.profileButtonLogout {
+  background-color: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+.profileLine {
+  margin-top: 3rem;
+}
+.myBlocksTitle p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 2rem 0;
+}
+.blocksCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding-bottom: 3rem;
+  width: 100%;
+}
+.blockCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.blockCard:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.blockCard img {
+  width: 4rem;
+}
+.blockCard p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: grey;
+}
+
+.profilelogout button {
+  background-color: transparent;
+  border: 1px solid var(--black);
+  color: var(--black);
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.editProfileModalTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.editProfileModalTitle p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--black);
+}
+.crossIcon:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+.editModalCont {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.EditModalLeft img {
+  width: 10rem;
+}
+.editModalRight {
+  width: 75%;
+}
+.modalNameChnage button {
+  background-color: transparent;
+  color: var(--black);
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2rem;
+  border: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+}
+.modalUserName p {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 1rem;
+  margin: 1.5rem 0;
+}
+.modalDescription p {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+.modalDescription textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--green);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--black);
+}
+.modalDescriptionNote {
+  font-size: 1.3rem !important;
+  color: grey !important;
+  margin-top: 0.5rem;
+}
+.editModalButtons {
+  display: flex;
+  gap: 1rem;
+}
+.editModalButtons button {
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.editModalSave {
+  background-color: var(--green);
+  color: white;
+}
+.editModalCancel {
+  background-color: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+/* profile-responsive.css */
+
+/* Large screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .profileMain {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .profile {
+    max-width: 100%;
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .profileImage {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .profileButton {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .profileButton button {
+    width: 100%;
+    max-width: 20rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .blocksCards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .blockCard {
+    padding: 1.5rem;
+  }
+
+  .editModalCont {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .EditModalLeft img {
+    width: 8rem;
+  }
+
+  .editModalRight {
+    width: 100%;
+  }
+
+  .editModalButtons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .editModalButtons button {
+    width: 100%;
+    padding: 0.8rem 2rem;
+  }
+}
+
+/* Tablet screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .profileHeader {
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .profileImage {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .profileButton button {
+    max-width: 18rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .blocksCards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .blockCard {
+    padding: 1rem;
+  }
+
+  .blockCard img {
+    width: 3.5rem;
+  }
+
+  .EditModalLeft img {
+    width: 7rem;
+  }
+
+  .modalDescription textarea {
+    height: 8rem;
+  }
+
+  .profilelogout button {
+    padding: 0.6rem 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .profileHeader {
+    padding: 1rem 0;
+  }
+
+  .profileImage {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .profileButton button {
+    max-width: 15rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .blocksCards {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .blockCard {
+    padding: 0.8rem;
+  }
+
+  .blockCard img {
+    width: 3rem;
+  }
+
+  .EditModalLeft img {
+    width: 6rem;
+  }
+
+  .modalDescription textarea {
+    height: 7rem;
+  }
+
+  .editModalButtons button {
+    padding: 0.7rem 1.5rem;
+  }
+
+  .profilelogout button {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+}

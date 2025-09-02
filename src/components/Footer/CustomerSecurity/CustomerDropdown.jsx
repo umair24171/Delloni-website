@@ -1,0 +1,87 @@
+import React from "react";
+import CustomHoverDropdown from "../../../shared/CustomHoverDropdown";
+
+const CustomerDropdown = () => {
+  const dropdownOptions = {
+    "Our Services": [
+      "All Our Services",
+      "Post an add",
+      "Shipping with Purchase protection",
+      "The gallery",
+      "Used Insurance",
+      "Furniture",
+      "Digitals Purchase Contracts",
+      "Valuing a car",
+      "Beauty Products",
+      "Automotive",
+      "Garden Tools",
+      "Pet Supplies",
+      "Office Supplies",
+      "Musical Instruments",
+    ],
+    services: [
+      "Consulting",
+      "Repair Services",
+      "Delivery",
+      "Installation",
+      "Warranty Plans",
+      "Customer Support",
+      "Subscription Plans",
+      "Gift Wrapping",
+      "Customization",
+      "Rental Services",
+      "Tech Support",
+      "Cleaning Services",
+    ],
+    support: [
+      "FAQs",
+      "Contact Us",
+      "Live Chat",
+      "Email Support",
+      "Return Policy",
+      "Shipping Info",
+      "Track Order",
+      "Warranty Info",
+      "Product Manuals",
+      "Community Forum",
+      "Feedback",
+      "Accessibility",
+      "Troubleshooting",
+    ],
+    about: [
+      "Our Story",
+      "Mission & Vision",
+      "Team",
+      "Careers",
+      "Press Releases",
+      "Blog",
+      "Events",
+      "Partnerships",
+      "Sustainability",
+      "Community Outreach",
+      "Awards",
+      "Investor Relations",
+    ],
+    account: [
+      "Sign In",
+      "Create Account",
+      "Order History",
+      "Wishlist",
+      "Profile Settings",
+      "Payment Methods",
+      "Address Book",
+      "Notifications",
+      "Loyalty Program",
+      "Refer a Friend",
+      "Gift Cards",
+      "Subscriptions",
+      "Security Settings",
+      "Privacy Settings",
+      "Logout",
+    ],
+  };
+
+  return <CustomHoverDropdown options={dropdownOptions} />;
+};
+
+export default CustomerDropdown;
